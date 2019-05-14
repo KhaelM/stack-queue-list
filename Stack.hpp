@@ -6,8 +6,8 @@ class Stack
 private:
     T* array;
     int size = -1;
-    int initialSize;
-    const static int DEFAULT_SIZE = 100;
+    int maxSize;
+    const int DEFAULT_SIZE = 100;
 public:
     Stack();
     Stack(int initialSize);
@@ -27,7 +27,7 @@ template<class T>
 Stack<T>::Stack(int initialSize)
 {
     this->array = new T[initialSize];
-    this->initialSize = initialSize;
+    this->maxSize = initialSize;
 }
 
 template<class T>
@@ -39,7 +39,7 @@ Stack<T>::~Stack()
 template<class T>
 void Stack<T>::push(T element)
 {
-    if(this->size >= this->initialSize - 1) {
+    if(this->size >= this->maxSize - 1) {
         throw new std::runtime_error("Le tableau est déjà plein.");
     }
 
