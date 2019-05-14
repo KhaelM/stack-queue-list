@@ -17,6 +17,8 @@ public:
     bool isEmpty();
     void enqueue(T); // Enfiler
     T dequeue(); // Defiler
+    void displayElement();
+    int getSize();
 };
 
 template<class T>
@@ -62,4 +64,23 @@ T Queue<T>::dequeue()
     }
 
     return this->array[this->firstElementIndex++];
+}
+
+template<class T>
+void Queue<T>::displayElement()
+{
+    std::cout << '[';
+    for (int i = this->firstElementIndex; i <= this->lastElementIndex; i++)
+    {
+        std::cout << this->array[i];
+        if (i != this->lastElementIndex)
+            std::cout << ',';
+    }
+    std::cout << ']' << '\n';
+}
+
+template<class T>
+int Queue<T>::getSize()
+{
+    return this->lastElementIndex - this->firstElementIndex;
 }
