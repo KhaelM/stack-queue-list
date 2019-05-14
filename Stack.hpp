@@ -15,6 +15,8 @@ public:
     void push(T); // Empiler
     T pop(); // Depiler
     bool isEmpty();
+    void displayElement();
+    int getSize();
 };
 
 template<class T>
@@ -42,7 +44,6 @@ void Stack<T>::push(T element)
     if(this->size >= this->maxSize - 1) {
         throw new std::runtime_error("Le tableau est déjà plein.");
     }
-
     this->array[++this->size] = element;
 }
 
@@ -60,4 +61,23 @@ template<class T>
 bool Stack<T>::isEmpty()
 {
     return this->size < 0;
+}
+
+template<class T>
+void Stack<T>::displayElement()
+{
+    std::cout << '[';
+    for (int i = 0; i <= this->size; i++)
+    {
+        std::cout << this->array[i];
+        if (i != this->size)
+            std::cout << ',';
+    }
+    std::cout << ']' << '\n';
+}
+
+template<class T>
+int Stack<T>::getSize()
+{
+    return this->size+1;
 }
