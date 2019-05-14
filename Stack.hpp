@@ -20,7 +20,7 @@ public:
 template<class T>
 Stack<T>::Stack()
 {
-    this->array = new T[Stack<T>::DEFAULT_SIZE];
+    this->array = new T[this->DEFAULT_SIZE];
 }
 
 template<class T>
