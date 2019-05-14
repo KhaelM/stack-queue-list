@@ -1,0 +1,1 @@
+How to create Stack, Queue and List with generic code
