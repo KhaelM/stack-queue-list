@@ -1,0 +1,16 @@
+Stack:
+    ✔ push @done(19-06-21 17:19)
+    ✔ pop @done(19-06-21 17:19)
+
+Queue:
+    ✔ enqueue @done(19-06-21 17:19)
+    ✔ dequeue @done(19-06-21 17:19)
+
+List:
+    ✔ add @done(19-06-21 17:19)
+    ✔ addBefore @done(19-06-22 00:07)
+    ✔ addAfter @done(19-06-22 00:21)
+    ✔ removeAt @done(19-06-21 17:22)
+    ✔ getFirst @done(19-06-22 00:25)
+    ✔ getLast @done(19-06-22 00:27)
+    ✔ get @done(19-06-21 17:19)
