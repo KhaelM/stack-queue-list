@@ -49,9 +49,12 @@ bool Queue<T>::isEmpty()
 template<class T>
 void Queue<T>::enqueue(T element)
 {
-    if(this->size >= this->maxSize - 1) {
+    if(this->lastElementIndex >= this->maxSize - 1) {
         throw new std::runtime_error("Impossible de d'enfiler: Le tableau est déjà plein.");
     }
+
+    if(this->getSize() == 0)
+        this->firstElementIndex = 0;
 
     this->array[++this->lastElementIndex] = element;
 }
